@@ -1,5 +1,4 @@
 SHELL:=$(shell which bash)
-PYTHON3_LOCATION:=$(shell which python3)
 VIRTUALENV_NAME:=.venv
 
 .PHONY: local
@@ -13,7 +12,7 @@ install: $(VIRTUALENV_NAME)
 
 .ONESHELL:
 $(VIRTUALENV_NAME):
-	$(PYTHON3_LOCATION) -m venv $(VIRTUALENV_NAME)
+	python3 -m venv $(VIRTUALENV_NAME)
 	source $(VIRTUALENV_NAME)/bin/activate
 	pip install --upgrade pip
 	pip install -r requirements.txt

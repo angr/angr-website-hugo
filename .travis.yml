@@ -1,5 +1,5 @@
 sudo: required
-dist: xenial
+dist: bionic
 env:
 - PY=e ANGR_ROOT=~/angr-dev
 install:
