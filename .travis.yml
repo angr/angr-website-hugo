@@ -1,10 +1,11 @@
 sudo: required
-dist: bionic
+dist: xenial
 env:
 - PY=e ANGR_ROOT=~/angr-dev
 install:
 - sudo apt-get update
-- sudo apt-get install -y python3 python3-pip hugo python3-venv
+- sudo apt-get install -y python3 python3-pip python3-venv
+- sudo snap install hugo
 - pushd ~
 - git clone -q https://github.com/angr/angr-dev
 - cd angr-dev
